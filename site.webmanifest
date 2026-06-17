@@ -1,0 +1,17 @@
+{
+  "name": "Aditya Raj Pandey — Software Engineer, AI/ML",
+  "short_name": "Aditya Raj Pandey",
+  "description": "Portfolio of Aditya Raj Pandey — Software Engineer (AI/ML), building production-grade LLM and applied-NLP systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#001233",
+  "theme_color": "#001233",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
