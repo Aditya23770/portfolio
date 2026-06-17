@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#001233" />
+
+  <!-- Primary Meta -->
+  <title>Aditya Raj Pandey — Software Engineer, AI/ML</title>
+  <meta name="description" content="Aditya Raj Pandey — Software Engineer (AI/ML) at CheQ, IIT Delhi '25. Building production-grade LLM and applied-NLP systems for fintech, from concept to deployment." />
+  <meta name="author" content="Aditya Raj Pandey" />
+  <meta name="keywords" content="Aditya Raj Pandey, AI Engineer, Machine Learning Engineer, Software Engineer, LLM, NLP, FinBERT, RAG, LangChain, IIT Delhi, CheQ" />
+  <link rel="canonical" href="https://adityarajpandey.netlify.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aditya Raj Pandey — Software Engineer, AI/ML" />
+  <meta property="og:description" content="Building production-grade LLM and applied-NLP systems for fintech. IIT Delhi '25 · AI/ML @ CheQ." />
+  <meta property="og:url" content="https://adityarajpandey.netlify.app/" />
+  <meta property="og:image" content="https://adityarajpandey.netlify.app/assets/cover.png" />
+  <meta property="og:site_name" content="Aditya Raj Pandey" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aditya Raj Pandey — Software Engineer, AI/ML" />
+  <meta name="twitter:description" content="Building production-grade LLM and applied-NLP systems for fintech. IIT Delhi '25 · AI/ML @ CheQ." />
+  <meta name="twitter:image" content="https://adityarajpandey.netlify.app/assets/cover.png" />
+
+  <!-- Icons & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aditya Raj Pandey",
+    "jobTitle": "Software Engineer — AI/ML",
+    "worksFor": { "@type": "Organization", "name": "CheQ" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Indian Institute of Technology, Delhi" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "India" },
+    "email": "mailto:adityarajpandey770@gmail.com",
+    "url": "https://adityarajpandey.netlify.app/",
+    "knowsLanguage": ["English", "Hindi", "French"],
+    "sameAs": [
+      "https://github.com/Aditya23770",
+      "https://www.linkedin.com/in/aditya-raj-pandey-815248230/"
+    ],
+    "knowsAbout": ["Large Language Models", "Applied NLP", "Named Entity Recognition", "RAG", "LangChain", "PyTorch", "FinBERT", "Prompt Engineering"]
+  }
+  </script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand" aria-label="Aditya Raj Pandey — home">
+        <span class="nav__brand-mark">ARP</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--solid btn--sm" href="assets/Aditya-Raj-Pandey-Resume.pdf" download>
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+          Resume
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav__mobile" id="mobileMenu" hidden>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--solid" href="assets/Aditya-Raj-Pandey-Resume.pdf" download>Download Resume</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="section hero" id="home" data-bg="#001233" data-fg="#ffffff" data-accent="#9fd0ff">
+      <div class="hero__bg" aria-hidden="true">
+        <img class="hero__cover" src="assets/cover.png" alt="" fetchpriority="high" decoding="async" />
+        <span class="hero__overlay"></span>
+        <span class="hero__grid-lines"></span>
+      </div>
+      <div class="container hero__inner reveal">
+        <div class="hero__avatar-wrap">
+          <img class="hero__avatar" src="assets/profile.png" alt="Portrait of Aditya Raj Pandey" width="220" height="220" fetchpriority="high" decoding="async" />
+          <span class="hero__avatar-ring" aria-hidden="true"></span>
+        </div>
+        <p class="hero__eyebrow">AI/ML @ CheQ · IIT Delhi '25 · Conversational AI for Fintech</p>
+        <h1 class="hero__title">Aditya Raj Pandey</h1>
+        <p class="hero__role">Software Engineer<span class="dot">·</span>AI / ML</p>
+        <p class="hero__lede">
+          I build production-grade <strong>LLM</strong> and <strong>applied-NLP</strong> systems —
+          from in-house entity recognition to retrieval-augmented assistants — and ship them end-to-end into fintech pipelines.
+        </p>
+        <div class="hero__meta">
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg> Bengaluru, India</span>
+          <span class="chip"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> Open to opportunities</span>
+        </div>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="assets/Aditya-Raj-Pandey-Resume.pdf" download>
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+            Download CV
+          </a>
+          <a class="btn btn--ghost" href="https://github.com/Aditya23770" target="_blank" rel="noopener">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8 4.9 4.9 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A4.9 4.9 0 0 0 5 4.8a5.2 5.2 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+            GitHub
+          </a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/aditya-raj-pandey-815248230/" target="_blank" rel="noopener">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3zM10 9h3.8v1.7h.05A4.2 4.2 0 0 1 17.6 9c4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" data-bg="#f4f8ff" data-fg="#002855" data-accent="#0466c8">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">01 — About</span>
+          <h2 class="section__title">Engineer at the intersection of LLMs, NLP, and product.</h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__bio reveal">
+            <p>
+              I'm a Software Engineer (AI/ML) at <strong>CheQ</strong>, building conversational AI and applied-NLP
+              systems for fintech. After a B.Tech in Engineering Physics at <strong>IIT Delhi</strong>, I've focused on
+              taking models from prototype to production — owning evaluation, compliance, and deployment, not just notebooks.
+            </p>
+            <p>
+              My core work spans <strong>information extraction, text classification, and LLM-powered systems</strong> in
+              regulated, production environments. I like learning by building, asking a lot of questions, and the kind of
+              thoughtful conversation that's usually about tech, philosophy, or a really good film.
+            </p>
+            <ul class="about__langs" aria-label="Languages">
+              <li><span>English</span><small>Full Professional</small></li>
+              <li><span>Hindi</span><small>Native / Bilingual</small></li>
+              <li><span>French</span><small>Elementary</small></li>
+            </ul>
+          </div>
+
+          <div class="about__stats reveal">
+            <div class="stat">
+              <strong class="stat__num" data-count="97" data-suffix="%">0</strong>
+              <span class="stat__label">F1 — production FinBERT NER</span>
+            </div>
+            <div class="stat">
+              <strong class="stat__num" data-count="99" data-suffix="%">0</strong>
+              <span class="stat__label">Merchant coverage (from 93%)</span>
+            </div>
+            <div class="stat">
+              <strong class="stat__num" data-count="370" data-suffix="k+">0</strong>
+              <span class="stat__label">Sensor entries analysed</span>
+            </div>
+            <div class="stat">
+              <strong class="stat__num" data-count="3000" data-suffix="+">0</strong>
+              <span class="stat__label">Movies scraped via ETL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section--dark" id="experience" data-bg="#0353a4" data-fg="#ffffff" data-accent="#9fd0ff">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">02 — Experience</span>
+          <h2 class="section__title">From prototype to production.</h2>
+        </header>
+
+        <!-- Running counters -->
+        <div class="counters reveal" data-fulltime-start="2025-11-01" data-intern-months="14">
+          <div class="counter">
+            <strong class="counter__num" id="ftCounter">—</strong>
+            <span class="counter__label">Full-time experience<small>since Nov 2025 · CheQ</small></span>
+          </div>
+          <div class="counter">
+            <strong class="counter__num" id="totalCounter">—</strong>
+            <span class="counter__label">Experience incl. internships<small>cumulative across roles</small></span>
+          </div>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item timeline__item--feature reveal">
+            <div class="timeline__dot"></div>
+            <div class="exp-card">
+              <div class="exp-card__top">
+                <div>
+                  <h3 class="exp-card__role">Software Engineer — AI/ML</h3>
+                  <p class="exp-card__org">CheQ · Bengaluru</p>
+                </div>
+                <div class="exp-card__when">
+                  <span class="badge badge--accent">Full-time</span>
+                  <span class="exp-card__dates">Nov 2025 — Present</span>
+                </div>
+              </div>
+              <p class="exp-card__note">
+                Progressed from <strong>AI/ML Intern</strong> (Sep–Nov 2025). Building <strong>CheQWisor</strong>,
+                an LLM-powered assistant for credit insights and user intelligence.
+              </p>
+
+              <div class="exp-card__block">
+                <h4>Merchant Entity Recognition (in-house NER)</h4>
+                <ul>
+                  <li>Led end-to-end development of an in-house Merchant NER, removing third-party vendor dependency in a regulated domain.</li>
+                  <li>Benchmarked SpaCy, GLiNER and FinBERT; productionized FinBERT with evaluation and compliance validation.</li>
+                  <li>Migrated label schema BIO → BILO and scaled data, lifting coverage from <strong>93% → 99%</strong> at <strong>97% F1</strong>.</li>
+                </ul>
+              </div>
+
+              <div class="exp-card__block">
+                <h4>LLM Sentiment & Issue Classification</h4>
+                <ul>
+                  <li>Scoped the problem with Product — defining taxonomy and ownership through cross-functional collaboration.</li>
+                  <li>Designed prompt-based sentiment & issue classification with iterative prompt-engineering refinement.</li>
+                  <li>Shipped user-sentiment intelligence via alerts and logging, enabling data-driven product decisions.</li>
+                </ul>
+              </div>
+
+              <div class="exp-card__block">
+                <h4>Chatbot Web Retrieval (domain-specific crawling)</h4>
+                <ul>
+                  <li>Ran a POC evaluating Firecrawl, Exa, Vertex AI and Crawl4AI for chatbot web-search integration.</li>
+                  <li>Analysed 3 months of chatbot queries and curated a 50-query golden dataset across all query types.</li>
+                  <li>Built a weekly crawl → LLM-summarization → vector-DB embedding pipeline for retrieval.</li>
+                </ul>
+              </div>
+
+              <ul class="tags">
+                <li>Python</li><li>Flask</li><li>FinBERT</li><li>SpaCy</li><li>GLiNER</li><li>LangChain</li><li>RAG</li><li>FAISS</li><li>Prompt Engineering</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="exp-card exp-card--compact">
+              <div class="exp-card__top">
+                <div>
+                  <h3 class="exp-card__role">AI Data Trainer</h3>
+                  <p class="exp-card__org">Remotasks · New Delhi</p>
+                </div>
+                <div class="exp-card__when">
+                  <span class="badge">Internship</span>
+                  <span class="exp-card__dates">Dec 2023 — Jan 2024</span>
+                </div>
+              </div>
+              <ul>
+                <li>Rated AI model outputs and crafted ideal responses using coding skills to improve accuracy and relevance.</li>
+                <li>Developed and rated coding prompts, providing optimal solutions to improve model performance (~30 hrs/week).</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="exp-card exp-card--compact">
+              <div class="exp-card__top">
+                <div>
+                  <h3 class="exp-card__role">Operations Manager</h3>
+                  <p class="exp-card__org">Bharat Skool · New Delhi</p>
+                </div>
+                <div class="exp-card__when">
+                  <span class="badge">Internship</span>
+                  <span class="exp-card__dates">May — Jul 2023</span>
+                </div>
+              </div>
+              <ul>
+                <li>Worked with the founder on YouTube content strategy to boost educational outreach.</li>
+                <li>Managed a team of IIT-JEE mentors and led marketing &amp; sales efforts to grow the user base.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="exp-card exp-card--compact">
+              <div class="exp-card__top">
+                <div>
+                  <h3 class="exp-card__role">Subject Matter Expert</h3>
+                  <p class="exp-card__org">Snipe · New Delhi</p>
+                </div>
+                <div class="exp-card__when">
+                  <span class="badge">Internship</span>
+                  <span class="exp-card__dates">Dec 2022 — Apr 2023</span>
+                </div>
+              </div>
+              <ul>
+                <li>Curated educational content with a 5-person quality-control team.</li>
+                <li>Produced 40+ hours of structured, comprehensive lecture videos within one month.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="exp-card exp-card--compact">
+              <div class="exp-card__top">
+                <div>
+                  <h3 class="exp-card__role">IIT-JEE Mentor</h3>
+                  <p class="exp-card__org">Exphub · New Delhi</p>
+                </div>
+                <div class="exp-card__when">
+                  <span class="badge">Internship</span>
+                  <span class="exp-card__dates">Jul — Aug 2022</span>
+                </div>
+              </div>
+              <ul>
+                <li>Mentored aspirants and supported structured exam preparation.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section--dark" id="projects" data-bg="#023e7d" data-fg="#ffffff" data-accent="#9fd0ff">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">03 — Projects</span>
+          <h2 class="section__title">Things I've designed, built and shipped.</h2>
+        </header>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project__head">
+              <h3 class="project__title">Email Automation Service</h3>
+              <div class="project__links">
+                <a href="https://github.com/Aditya23770/mass-emailer-cron" target="_blank" rel="noopener" aria-label="GitHub repository">
+                  <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8 4.9 4.9 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A4.9 4.9 0 0 0 5 4.8a5.2 5.2 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="project__desc">
+              A Flask service for personalized outreach at scale: template rotation, CSV-driven contact
+              management with duplicate-send prevention, automatic PDF attachment, configurable delays,
+              and a web dashboard with logging. Deployed on PythonAnywhere.
+            </p>
+            <ul class="tags">
+              <li>Flask</li><li>Python</li><li>SMTP</li><li>CSV</li><li>PythonAnywhere</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__head">
+              <h3 class="project__title">LLM-Powered SQL Chatbot</h3>
+              <div class="project__links">
+                <a href="https://github.com/Aditya23770/llm-sql-chatbot" target="_blank" rel="noopener" aria-label="GitHub repository">
+                  <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8 4.9 4.9 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A4.9 4.9 0 0 0 5 4.8a5.2 5.2 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="project__desc">
+              A natural-language → SQL assistant. Questions in plain English are translated to executable
+              PostgreSQL, run, and returned with formatted results. Layered flow: Redis cache → ChromaDB
+              semantic schema retrieval → LLM SQL generation → execution → cached response.
+            </p>
+            <ul class="tags">
+              <li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>ChromaDB</li><li>Groq / OpenAI / Claude</li><li>React</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__head">
+              <h3 class="project__title">Cyclone Preheater Anomaly Detection</h3>
+              <div class="project__links">
+                <a href="https://github.com/Aditya23770/anomaly-detection-cycloneData" target="_blank" rel="noopener" aria-label="GitHub repository">
+                  <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8 4.9 4.9 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A4.9 4.9 0 0 0 5 4.8a5.2 5.2 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="project__desc">
+              Unsupervised anomaly detection on 370k+ high-frequency sensor readings spanning 3 years.
+              Applied Min-Max scaling, handled non-numeric values, and tuned DBSCAN via k-distance and
+              silhouette scores to surface pressure/temperature anomalies and localized deviations.
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>DBSCAN</li><li>scikit-learn</li><li>Pandas</li><li>Time-series</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__head">
+              <h3 class="project__title">Movie Box-Office Data Scraper</h3>
+              <div class="project__links">
+                <a href="https://github.com/Aditya23770/WebScrapper" target="_blank" rel="noopener" aria-label="GitHub repository">
+                  <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8 4.9 4.9 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A4.9 4.9 0 0 0 5 4.8a5.2 5.2 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="project__desc">
+              An ETL pipeline that scrapes box-office data for 3000+ movies from the-numbers.com using
+              BeautifulSoup, parallelised with ThreadPoolExecutor. Cleans, transforms and loads into CSV,
+              enriched with TMDB metadata.
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>BeautifulSoup</li><li>ThreadPoolExecutor</li><li>ETL</li><li>TMDB API</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--dark" id="skills" data-bg="#002855" data-fg="#ffffff" data-accent="#9fd0ff">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">04 — Skills</span>
+          <h2 class="section__title">A full-stack AI toolkit.</h2>
+        </header>
+
+        <div class="skills">
+          <div class="skill-card reveal">
+            <h3>Languages &amp; Core</h3>
+            <ul class="tags">
+              <li>Python</li><li>Java</li><li>SQL</li><li>Data Structures &amp; Algorithms</li><li>OOP / LLD</li><li>Git &amp; GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Machine Learning &amp; GenAI</h3>
+            <ul class="tags">
+              <li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>Hugging Face Transformers</li><li>FinBERT</li><li>SpaCy</li><li>GLiNER</li><li>LangChain</li><li>LangGraph</li><li>RAG</li><li>LLM Orchestration (OpenAI / Azure / Claude)</li><li>Prompt Engineering</li><li>FAISS</li><li>ChromaDB</li><li>Sentence Transformers</li><li>NLP</li><li>Multi-Agent Systems</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Data &amp; Backend</h3>
+            <ul class="tags">
+              <li>FastAPI</li><li>Flask</li><li>PostgreSQL</li><li>Redis</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li><li>BeautifulSoup</li><li>ETL</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Tools &amp; Platforms</h3>
+            <ul class="tags">
+              <li>Streamlit</li><li>Power BI</li><li>Advanced Excel</li><li>Unstructured.io</li><li>Vercel</li><li>Neon</li><li>Upstash</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Ways of Working</h3>
+            <ul class="tags">
+              <li>Cross-functional Collaboration</li><li>Stakeholder Management</li><li>Agile</li><li>System Design Thinking</li><li>Risk Assessment</li><li>Model Governance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION & CERTIFICATIONS ============ -->
+    <section class="section section--dark" id="education" data-bg="#001845" data-fg="#ffffff" data-accent="#9fd0ff">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">05 — Education</span>
+          <h2 class="section__title">Foundations.</h2>
+        </header>
+
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <div class="edu-card__top">
+              <h3>B.Tech, Engineering Physics</h3>
+              <span class="exp-card__dates">Nov 2021 — May 2025</span>
+            </div>
+            <p class="exp-card__org">Indian Institute of Technology, Delhi</p>
+            <p class="project__desc">
+              Engineering Physics with a steady pull toward computation, data and machine learning —
+              the bridge into building AI systems professionally.
+            </p>
+          </div>
+
+          <div class="edu-card edu-card--cert reveal">
+            <span class="section__kicker">Certification</span>
+            <h3>Transformer Models &amp; BERT</h3>
+            <p class="exp-card__org">Google Cloud</p>
+            <ul class="tags"><li>Transformers</li><li>BERT</li><li>NLP</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS & LEADERSHIP ============ -->
+    <section class="section section--dark" id="leadership" data-bg="#33415c" data-fg="#ffffff" data-accent="#cdd6ec">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__kicker">06 — Achievements &amp; Leadership</span>
+          <h2 class="section__title">Beyond the codebase.</h2>
+        </header>
+
+        <div class="awards reveal">
+          <div class="award">
+            <strong>JEE Advanced 2021</strong>
+            <span>All-India Rank 4326</span>
+          </div>
+          <div class="award">
+            <strong>JEE Main 2021</strong>
+            <span>All-India Rank 6451</span>
+          </div>
+          <div class="award">
+            <strong>9 Leadership Roles</strong>
+            <span>Across IIT Delhi student bodies</span>
+          </div>
+        </div>
+
+        <h3 class="leadership__subhead reveal">Positions of Responsibility</h3>
+        <div class="por">
+          <article class="por-card reveal">
+            <span class="por-card__tag">Arts &amp; Culture</span>
+            <h4>Event Coordinator — Physics Society (CAIC)</h4>
+            <p class="por-card__meta">IIT Delhi · Aug 2023 — Apr 2024</p>
+            <ul>
+              <li>Ran Intern Insights for freshers, fostering community and knowledge sharing.</li>
+              <li>Led the Simulation Challenge and organised Professor–Student Meetups.</li>
+            </ul>
+          </article>
+
+          <article class="por-card reveal">
+            <span class="por-card__tag">Arts &amp; Culture</span>
+            <h4>Logistics Coordinator — Rendezvous IITD</h4>
+            <p class="por-card__meta">IIT Delhi · Aug 2023 — Apr 2024</p>
+            <ul>
+              <li>Streamlined logistics for Comedy Hunt, Qawwali Night &amp; SPIC MACAY.</li>
+              <li>Commanded a 10-person team across stationery to tech-equipment needs.</li>
+            </ul>
+          </article>
+
+          <article class="por-card reveal">
+            <span class="por-card__tag">Science &amp; Tech</span>
+            <h4>Event Executive — TRYST</h4>
+            <p class="por-card__meta">IIT Delhi · Jan — Apr 2023</p>
+            <ul>
+              <li>Secured sponsorships from Quickheal &amp; Neovel through pitching.</li>
+              <li>Ran 6 events with CXO-level collaboration; 700+ registrations.</li>
+            </ul>
+          </article>
+
+          <article class="por-card reveal">
+            <span class="por-card__tag">Arts &amp; Culture</span>
+            <h4>Infrastructure Executive — Rendezvous IITD</h4>
+            <p class="por-card__meta">IIT Delhi · Jan — Aug 2023</p>
+            <ul>
+              <li>Coordinated stalls for Techno, Beardo, Havells &amp; Swiss Beauty.</li>
+              <li>Curated live performances with 100+ artists; streamlined pronite food stalls.</li>
+            </ul>
+          </article>
+
+          <article class="por-card reveal">
+            <span class="por-card__tag">Education</span>
+            <h4>Marketing Executive — Hindi Samiti</h4>
+            <p class="por-card__meta">IIT Delhi · Feb — Mar 2023</p>
+            <ul>
+              <li>Marketed the MUN debate, reaching 500+ debaters across 20+ colleges.</li>
+            </ul>
+          </article>
+
+          <article class="por-card reveal">
+            <span class="por-card__tag">Arts &amp; Culture</span>
+            <h4>Publicity Executive — Physics Society (CAIC)</h4>
+            <p class="por-card__meta">IIT Delhi · Aug 2022 — Aug 2023</p>
+            <ul>
+              <li>Drove publicity and engagement across the society's events.</li>
+            </ul>
+          </article>
+
+          <article class="por-card reveal">
+            <span class="por-card__tag">Social Action</span>
+            <h4>Hospitality Executive — Indradhanu</h4>
+            <p class="por-card__meta">IIT Delhi · Dec 2022 — Feb 2023</p>
+            <ul>
+              <li>Ran hospitality for 6 events over 3 days at VIBHINN, a queer-collective conference.</li>
+            </ul>
+          </article>
+
+          <article class="por-card reveal">
+            <span class="por-card__tag">Dramatics</span>
+            <h4>Writer / Actor / Assistant — Ankahi</h4>
+            <p class="por-card__meta">IIT Delhi · Mar 2022</p>
+            <ul>
+              <li>2nd place in an inter-hostel short-filmmaking competition; 15-person team, 10-day build.</li>
+            </ul>
+          </article>
+
+          <article class="por-card reveal">
+            <span class="por-card__tag">Dramatics</span>
+            <h4>Actor — Ankahi</h4>
+            <p class="por-card__meta">IIT Delhi · Jul — Aug 2022</p>
+            <ul>
+              <li>Co-wrote, acted in and produced a 1971-war stage play for an audience of 1000, in 7 days.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--dark" id="contact" data-bg="#001233" data-fg="#ffffff" data-accent="#9fd0ff">
+      <div class="container contact">
+        <header class="section__head reveal">
+          <span class="section__kicker">07 — Contact</span>
+          <h2 class="section__title">Let's build something.</h2>
+          <p class="section__sub">Open to roles in AI / ML, GenAI and software engineering. The fastest way to reach me is email.</p>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__side reveal">
+            <button class="contact__email" id="copyEmail" type="button" aria-label="Copy email address">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+              <span>adityarajpandey770@gmail.com</span>
+              <span class="contact__copy" id="copyState">Copy</span>
+            </button>
+
+            <div class="contact__socials">
+              <a class="btn btn--ghost" href="https://github.com/Aditya23770" target="_blank" rel="noopener">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8 4.9 4.9 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A4.9 4.9 0 0 0 5 4.8a5.2 5.2 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+                GitHub
+              </a>
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/aditya-raj-pandey-815248230/" target="_blank" rel="noopener">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3zM10 9h3.8v1.7h.05A4.2 4.2 0 0 1 17.6 9c4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg>
+                LinkedIn
+              </a>
+              <a class="btn btn--ghost" href="assets/Aditya-Raj-Pandey-Resume.pdf" download>
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+                Resume
+              </a>
+            </div>
+          </div>
+
+          <!-- Netlify Forms -->
+          <form class="contact__form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hp" hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button class="btn btn--solid" type="submit">Send message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" data-bg="#001233" data-fg="#ffffff">
+    <div class="container footer__inner">
+      <p class="footer__name">Aditya Raj Pandey</p>
+      <p class="footer__note">Built with HTML, CSS &amp; vanilla JS · © <span id="year"></span></p>
+      <div class="footer__socials">
+        <a href="https://github.com/Aditya23770" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8 4.9 4.9 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A4.9 4.9 0 0 0 5 4.8a5.2 5.2 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aditya-raj-pandey-815248230/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3zM10 9h3.8v1.7h.05A4.2 4.2 0 0 1 17.6 9c4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg>
+        </a>
+        <a href="mailto:adityarajpandey770@gmail.com" aria-label="Email">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top" hidden>
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>
+  </button>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>
