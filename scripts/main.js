@@ -290,7 +290,7 @@
           (data.get("message") || "") +
             "\n\n— " + (data.get("name") || "") + " (" + (data.get("email") || "") + ")"
         );
-        setStatus("Opening your email app… (the in-page form delivers automatically once the site is live on Netlify).", "warn");
+        setStatus("Opening your email app…");
         window.location.href = "mailto:" + EMAIL + "?subject=" + subject + "&body=" + body;
       } finally {
         if (submitBtn) submitBtn.disabled = false;
