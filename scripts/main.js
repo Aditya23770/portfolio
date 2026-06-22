@@ -14,6 +14,171 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* =======================================================
+     Featured post — config-driven clickable card above
+     Experience. Renders from FEATURED immediately, then
+     enriches with live metadata (LinkedIn via the microlink
+     unfurl proxy, GitHub via the REST API). Any fetch failure
+     silently keeps the config fallbacks.
+     ======================================================= */
+  // Each entry renders one card (in order), stacked above the Experience section.
+  // Add a card by dropping another object in this list; remove one by deleting it or
+  // setting enabled:false. `title`/`excerpt`/`image` are fallbacks shown instantly, then
+  // enriched by the live fetch when available.
+  const FEATURED = [
+    {
+      enabled: true,
+      source: "linkedin", // "linkedin" | "github"
+      url: "https://www.linkedin.com/posts/pandey23770_cheq-problemsolving-aihackathon-activity-7438533295669211136-Ss5s",
+      title: "Team Orbit — 1st Place, CheQ Point AI Hackathon",
+      excerpt: "Grateful to share that Team Orbit secured 🥇 First Place at the CheQ Point AI Hackathon!",
+      image: "assets/cover.png",
+    },
+
+    // A GitHub repo card. Omit `image` and it defaults to the standard GitHub mark,
+    // then swaps to the repo's live social-preview image (name, ★ stars, language).
+    {
+      enabled: true,
+      source: "github",
+      url: "https://github.com/Aditya23770/mass-emailer-cron",
+      title: "Mass Emailer Cron",
+      excerpt: "An Inteligent way to send bulk emails using cron jobs and Gmail API, with features like scheduling, personalization, and tracking.",
+    },
+  ];
+
+  const SOURCE_ICON = {
+    linkedin: '<path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3zM10 9h3.8v1.7h.05A4.2 4.2 0 0 1 17.6 9c4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/>',
+    github: '<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8 4.9 4.9 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A4.9 4.9 0 0 0 5 4.8a5.2 5.2 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/>',
+  };
+
+  // GitHub cards fall back to a standard GitHub mark until the live preview loads.
+  const GITHUB_FALLBACK_IMAGE = "assets/github-card.svg";
+
+  function buildFeatured() {
+    const experience = $("#experience");
+    if (!experience) return;
+    const items = FEATURED.filter((it) => it && it.enabled);
+    if (!items.length) return;
+
+    const band = document.createElement("div");
+    band.className = "featured reveal";
+    const container = document.createElement("div");
+    container.className = "container";
+    const list = document.createElement("div");
+    list.className = "featured__list";
+    container.appendChild(list);
+    band.appendChild(container);
+
+    items.forEach((item) => list.appendChild(buildFeaturedCard(item)));
+    experience.parentNode.insertBefore(band, experience);
+  }
+
+  function buildFeaturedCard(item) {
+    const sourceLabel = item.source === "github" ? "GitHub" : "LinkedIn";
+    const ctaLabel = item.source === "github" ? "View repo" : "View post";
+    const icon = SOURCE_ICON[item.source] || SOURCE_ICON.linkedin;
+
+    const card = document.createElement("a");
+    card.className = "featured-card";
+    card.target = "_blank";
+    card.rel = "noopener";
+    card.innerHTML =
+      '<span class="featured-card__media">' +
+        '<img class="featured-card__thumb" alt="" loading="lazy" decoding="async" />' +
+      '</span>' +
+      '<span class="featured-card__body">' +
+        '<span class="featured-card__badge">' +
+          '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">' + icon + '</svg>' +
+          '<span class="featured-card__src"></span>' +
+        '</span>' +
+        '<span class="featured-card__title"></span>' +
+        '<span class="featured-card__excerpt"></span>' +
+      '</span>' +
+      '<span class="featured-card__cta" aria-hidden="true">' + ctaLabel +
+        '<svg class="ic" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>' +
+      '</span>';
+
+    const thumbEl = $(".featured-card__thumb", card);
+    const srcEl = $(".featured-card__src", card);
+    const titleEl = $(".featured-card__title", card);
+    const excerptEl = $(".featured-card__excerpt", card);
+
+    // Config fallbacks first — the card always looks complete.
+    card.href = item.url;
+    card.setAttribute(
+      "aria-label",
+      "Featured: " + item.title + " — opens " + sourceLabel + " in a new tab"
+    );
+    thumbEl.src = item.image || (item.source === "github" ? GITHUB_FALLBACK_IMAGE : "assets/cover.png");
+    srcEl.textContent = "Featured · " + sourceLabel;
+    titleEl.textContent = item.title;
+    excerptEl.textContent = item.excerpt;
+
+    enrichFeatured(item, { titleEl, excerptEl, thumbEl });
+    return card;
+  }
+
+  async function enrichFeatured(item, els) {
+    try {
+      const meta =
+        item.source === "github"
+          ? await fetchGitHubMeta(item.url)
+          : await fetchLinkUnfurl(item.url);
+      if (!meta) return;
+      if (meta.title) els.titleEl.textContent = meta.title;
+      if (meta.excerpt) els.excerptEl.textContent = meta.excerpt;
+      if (meta.image) {
+        // Swap the thumbnail only if the remote image actually loads.
+        const probe = new Image();
+        probe.onload = () => { els.thumbEl.src = meta.image; };
+        probe.src = meta.image;
+      }
+    } catch (_) {
+      /* keep config fallbacks */
+    }
+  }
+
+  async function fetchJson(url, ms) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), ms || 6000);
+    try {
+      const res = await fetch(url, { signal: ctrl.signal });
+      return res.ok ? await res.json() : null;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  async function fetchLinkUnfurl(url) {
+    const json = await fetchJson("https://api.microlink.io/?url=" + encodeURIComponent(url), 6000);
+    if (!json || json.status !== "success" || !json.data) return null;
+    const d = json.data;
+    // Note: LinkedIn's OG title is hashtag soup ("#tag #tag | Name"), so we keep the
+    // curated config title and only enrich the image + excerpt from the live post.
+    return {
+      title: "",
+      excerpt: d.description || "",
+      image: d.image && d.image.url ? d.image.url : "",
+    };
+  }
+
+  async function fetchGitHubMeta(url) {
+    const m = url.match(/github\.com\/([^/]+)\/([^/?#]+)/i);
+    if (!m) return null;
+    const repo = m[2].replace(/\.git$/, "");
+    const d = await fetchJson("https://api.github.com/repos/" + m[1] + "/" + repo, 6000);
+    if (!d) return null;
+    // Keep the curated config title; enrich the excerpt + GitHub's generated
+    // social-preview image (which itself shows name, ★ stars and language).
+    return {
+      title: "",
+      excerpt: d.description || "",
+      image: "https://opengraph.githubassets.com/1/" + m[1] + "/" + repo,
+    };
+  }
+
+  buildFeatured();
+
+  /* =======================================================
      Section-wise color system + active nav link
      ======================================================= */
   const colorSections = $$("[data-bg]");

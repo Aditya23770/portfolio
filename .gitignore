@@ -1,5 +1,7 @@
+# Markdown — local docs only, not tracked / deployed
+*.md
+
 # Source / private files — not part of the deployed site
-skiil.md
 Profile.pdf
 
 # OS / editor noise

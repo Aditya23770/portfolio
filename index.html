@@ -69,10 +69,6 @@
   <!-- Navbar -->
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#home" class="nav__brand" aria-label="Aditya Raj Pandey — home">
-        <span class="nav__brand-mark">ARP</span>
-      </a>
-
       <nav class="nav__links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -373,11 +369,11 @@
                 </a>
               </div>
             </div>
-            <p class="project__desc">
-              A Flask service for personalized outreach at scale: template rotation, CSV-driven contact
-              management with duplicate-send prevention, automatic PDF attachment, configurable delays,
-              and a web dashboard with logging. Deployed on PythonAnywhere.
-            </p>
+            <ul class="project__points">
+              <li>Automated <strong>personalized outreach at scale</strong> with <strong>template rotation</strong> and delays</li>
+              <li><strong>CSV-driven</strong> contacts with <strong>duplicate-send prevention</strong> and auto <strong>PDF attachment</strong></li>
+              <li><strong>Web dashboard with logging</strong>; deployed on <strong>PythonAnywhere</strong></li>
+            </ul>
             <ul class="tags">
               <li>Flask</li><li>Python</li><li>SMTP</li><li>CSV</li><li>PythonAnywhere</li>
             </ul>
@@ -392,11 +388,11 @@
                 </a>
               </div>
             </div>
-            <p class="project__desc">
-              A natural-language → SQL assistant. Questions in plain English are translated to executable
-              PostgreSQL, run, and returned with formatted results. Layered flow: Redis cache → ChromaDB
-              semantic schema retrieval → LLM SQL generation → execution → cached response.
-            </p>
+            <ul class="project__points">
+              <li>Converts <strong>plain-English questions</strong> into executable <strong>PostgreSQL</strong> instantly</li>
+              <li>Layered <strong>Redis cache → ChromaDB</strong> schema retrieval → <strong>LLM</strong> generation</li>
+              <li><strong>Semantic caching</strong> cut repeat-query latency; <strong>React</strong> dashboard</li>
+            </ul>
             <ul class="tags">
               <li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>ChromaDB</li><li>Groq / OpenAI / Claude</li><li>React</li>
             </ul>
@@ -411,11 +407,11 @@
                 </a>
               </div>
             </div>
-            <p class="project__desc">
-              Unsupervised anomaly detection on 370k+ high-frequency sensor readings spanning 3 years.
-              Applied Min-Max scaling, handled non-numeric values, and tuned DBSCAN via k-distance and
-              silhouette scores to surface pressure/temperature anomalies and localized deviations.
-            </p>
+            <ul class="project__points">
+              <li><strong>Unsupervised anomaly detection</strong> across <strong>370k+ sensor readings</strong>, 3 years</li>
+              <li>Tuned <strong>DBSCAN</strong> via <strong>k-distance &amp; silhouette</strong> scores</li>
+              <li>Surfaced <strong>pressure/temperature anomalies</strong> and localized process deviations</li>
+            </ul>
             <ul class="tags">
               <li>Python</li><li>DBSCAN</li><li>scikit-learn</li><li>Pandas</li><li>Time-series</li>
             </ul>
@@ -430,11 +426,11 @@
                 </a>
               </div>
             </div>
-            <p class="project__desc">
-              An ETL pipeline that scrapes box-office data for 3000+ movies from the-numbers.com using
-              BeautifulSoup, parallelised with ThreadPoolExecutor. Cleans, transforms and loads into CSV,
-              enriched with TMDB metadata.
-            </p>
+            <ul class="project__points">
+              <li><strong>ETL pipeline</strong> scraping <strong>3000+ movies</strong> from the-numbers.com</li>
+              <li>Parallelized with <strong>ThreadPoolExecutor</strong> for <strong>faster throughput</strong></li>
+              <li>Cleaned, transformed, enriched with <strong>TMDB metadata</strong> into CSV</li>
+            </ul>
             <ul class="tags">
               <li>Python</li><li>BeautifulSoup</li><li>ThreadPoolExecutor</li><li>ETL</li><li>TMDB API</li>
             </ul>
@@ -691,7 +687,7 @@
   <footer class="footer" data-bg="#001233" data-fg="#ffffff">
     <div class="container footer__inner">
       <p class="footer__name">Aditya Raj Pandey</p>
-      <p class="footer__note">Built with HTML, CSS &amp; vanilla JS · © <span id="year"></span></p>
+      <p class="footer__note">Let's build something great together · © <span id="year"></span></p>
       <div class="footer__socials">
         <a href="https://github.com/Aditya23770" target="_blank" rel="noopener" aria-label="GitHub">
           <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8 4.9 4.9 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A4.9 4.9 0 0 0 5 4.8a5.2 5.2 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
