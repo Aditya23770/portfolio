@@ -423,6 +423,24 @@ ul { list-style: none; }
 .por-card__meta { color: var(--muted); font-size: .82rem; margin: .3rem 0 .8rem; }
 .por-card ul li { font-size: .9rem; }
 
+/* ---------- Short summary + "See more" ---------- */
+.summary { margin-top: .9rem; color: var(--muted); line-height: 1.55; }
+.summary strong { color: var(--fg); font-weight: 600; }
+.por-card .summary { margin-top: 0; font-size: .92rem; }
+.more { margin-top: .8rem; }
+.more > summary {
+  display: inline-flex; align-items: center; gap: .35rem; cursor: pointer; list-style: none;
+  font-size: .85rem; font-weight: 600; color: var(--accent); border-radius: 6px;
+}
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary::after { content: "▾"; transition: transform .2s var(--ease); }
+.more[open] > summary::after { transform: rotate(180deg); }
+.more > summary:hover { text-decoration: underline; }
+.more > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.more[open] > summary .more__open { display: none; }
+.more:not([open]) > summary .more__close { display: none; }
+.more > ul, .more > .exp-card__block:first-of-type { margin-top: .8rem; }
+
 /* ---------- Contact ---------- */
 .contact__grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(1.6rem, 4vw, 3rem); align-items: start; }
 .contact__email {

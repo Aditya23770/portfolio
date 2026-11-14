@@ -39,9 +39,9 @@
     {
       enabled: true,
       source: "github",
-      url: "https://github.com/Aditya23770/mass-emailer-cron",
-      title: "Mass Emailer Cron",
-      excerpt: "An Inteligent way to send bulk emails using cron jobs and Gmail API, with features like scheduling, personalization, and tracking.",
+      url: "https://github.com/Aditya23770/kyb-tool-mcp",
+      title: "TrustLedger — Open-source KYB Compliance Tool",
+      excerpt: "Checks a UK company on Companies House, OFAC/UN sanctions and its website, then returns Approve, Escalate or Reject with evidence. Works as an MCP server for AI agents.",
     },
   ];
 
