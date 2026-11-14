@@ -178,6 +178,27 @@
 
   buildFeatured();
 
+  /* ----- Award certificate viewer ----- */
+  const certModal = $("#certModal");
+  if (certModal && typeof certModal.showModal === "function") {
+    const certImg = $("#certImg");
+    const certCaption = $("#certCaption");
+    $$(".award-badge").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        certImg.src = btn.dataset.cert;
+        certImg.alt = btn.dataset.caption + " certificate";
+        certCaption.textContent = btn.dataset.caption;
+        certModal.showModal();
+      });
+    });
+    $("#certClose").addEventListener("click", () => certModal.close());
+    // Click on the dimmed backdrop closes it.
+    certModal.addEventListener("click", (e) => { if (e.target === certModal) certModal.close(); });
+  } else {
+    // Old browsers: open the image in a new tab instead.
+    $$(".award-badge").forEach((btn) => btn.addEventListener("click", () => window.open(btn.dataset.cert, "_blank", "noopener")));
+  }
+
   /* =======================================================
      Section-wise color system + active nav link
      ======================================================= */
